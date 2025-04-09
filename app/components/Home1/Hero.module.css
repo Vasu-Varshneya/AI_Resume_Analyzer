@@ -1,0 +1,157 @@
+.container {
+    min-height: 100vh;
+    background-color: #000;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    font-family: 'poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .main {
+    position: relative;
+    flex: 1;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .particleCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+  }
+  
+  .content {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 140px); /* Adjust based on header/footer height */
+  }
+  
+  .title {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .gradient {
+    background: linear-gradient(90deg, #a855f7 0%, #ec4899 100%);
+    -webkit-background-clip: text;
+    color: transparent;
+    background-clip: text;
+    width: fit-content;
+  }
+  .gradient2 {
+    background: linear-gradient(90deg, #ec4899 0%, #f6d365 100%);
+    -webkit-background-clip: text;
+    color: transparent;
+    background-clip: text;
+    width: fit-content;
+  }
+  
+  .description {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    color: #94a3b8;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    line-height: 1.6;
+  }
+  
+  .buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+  }
+  
+  .primaryButton,
+  .secondaryButton {
+    padding: 0.75rem 1.5rem;
+    border-radius: 9999px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    font-size: 1rem;
+    min-width: 140px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .primaryButton {
+    background: linear-gradient(90deg, #a855f7 0%, #ec4899 100%);
+    color: white;
+    border: none;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+  }
+  
+  .primaryButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(168, 85, 247, 0.4);
+  }
+  
+  .primaryButton:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 10px rgba(168, 85, 247, 0.4);
+  }
+  
+  .secondaryButton {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+  }
+  
+  .secondaryButton:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+  }
+  
+  .secondaryButton:active {
+    transform: translateY(0);
+    background: rgba(255, 255, 255, 0.12);
+  }
+  
+  @media (max-width: 768px) {
+    .content {
+      padding: 120px 20px;
+      min-height: calc(100vh - 100px);
+    }
+  
+    .buttons {
+      flex-direction: column;
+      width: 100%;
+      max-width: 300px;
+      margin: 2rem auto 0;
+    }
+  
+    .primaryButton,
+    .secondaryButton {
+      width: 100%;
+    }
+  }

@@ -1,0 +1,132 @@
+/* src/Middle.css */
+
+.middle-container {
+    margin-top: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    margin-bottom: 80px;
+  }
+  
+  .middle-header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+  }
+  
+  .highlight {
+    color: #b535ff;
+    text-align: center;
+    text-decoration: underline;
+  }
+  
+  .subtext {
+    display: flex;
+    justify-content: center;
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #666;
+    margin-bottom: 20px;
+    
+  }
+  
+  .view-more {
+    background-color: #ff6b35;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  .content {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .code-block {
+    flex: 1;
+    background-color: #1e1e2e;
+    border-radius: 10px;
+    padding: 20px;
+    color: #ffe100;
+    font-family: monospace;
+  }
+  
+  .grid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  
+  /* Glass effect on cards with gradient */
+.card_code {
+    border-radius: 10px;
+    padding: 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+    backdrop-filter: blur(10px); /* Glass effect */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow to enhance glass effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Specific card colors or gradients with glass effect */
+  .card_code.blue {
+    background-color: #3498db;
+     backdrop-filter: blur(10px);
+  }
+  
+  .card_code.green {
+    background-color: #2ecc71;
+     backdrop-filter: blur(10px);
+  }
+  
+  .card_code.teal {
+    background: rgba(255, 95, 3, 0.952); /* Semi-transparent teal */
+    backdrop-filter: blur(10px);
+  }
+  
+  .card_code.orange {
+    background-color: #f39c12;
+      backdrop-filter: blur(10px);
+  }
+  
+  /* Hover animation for icon */
+  .card_code .icon {
+    font-size: 3rem;
+    font-weight: 700;
+    transition: transform 0.3s ease;
+    margin-right: 8px;
+  }
+  
+  .card_code:hover {
+    transform: translateY(-5px); /* Slight lift when hovered */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* More prominent shadow on hover */
+  }
+  
+  .card_code:hover .icon {
+    transform: scale(1.3); /* Icon grows when hovered */
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .content {
+      flex-direction: column;
+    }
+    
+    .grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
