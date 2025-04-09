@@ -4,9 +4,7 @@ import { useDropzone } from "react-dropzone";
 import { motion, AnimatePresence } from "framer-motion";
 import * as pdfjs from "pdfjs-dist/legacy/build/pdf";
 import { useAuth } from "../context/authcontext";
-
-pdfjs.GlobalWorkerOptions.workerSrc =
-  "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.worker.min.js";
+pdfjs.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 
 const CoverLetterGenerator = ({ isOpen, onClose, setAnalysisData }) => {
   const [file, setFile] = useState(null);
